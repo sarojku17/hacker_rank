@@ -1,0 +1,40 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() 
+{
+    int32_t a,b,m,n,s,t,position ;                      
+    cin>>s>>t;                                            //  all re quired variables   
+    cin>>a>>b;                                           
+    cin>>m>>n;                      
+    int apple[m];
+    int orange[n];
+    int counter=0;                                         //to count fallen apples and oranges on sam's house
+    
+    
+    for(register int i=0;i<m;i++)
+        {
+        cin>>apple[i];
+        position=(a+apple[i]);
+        if( (position>=s) && (position<=t) )
+        counter++;
+          }
+      cout<<counter<<endl;
+      counter=0;
+    
+    for(register int i=0;i<n;i++)
+        {
+        
+        cin>>orange[i];
+        position=(b+orange[i]);
+        if( (position>=s) && (position<=t) )
+        counter++;
+      
+        }
+    cout<<counter<<endl;
+}
